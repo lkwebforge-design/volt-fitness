@@ -1,0 +1,1 @@
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.section,.program,.coach-grid article').forEach(e=>{e.classList.add('reveal');io.observe(e)});document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.nav nav').classList.toggle('open'));
